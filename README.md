@@ -26,3 +26,14 @@ void app_main(void)
     }
 }
 ```
+## UART Baudrate
+Allows quickly change UART baudtate.
+```C
+set_baudrate(UART_NUM_0, UART_BAUDTATE_19200);
+
+char *str = "TESTTEST";
+while (true){
+    uart_transmit(str, strlen(str));
+    vTaskDelay(50);
+}
+```
